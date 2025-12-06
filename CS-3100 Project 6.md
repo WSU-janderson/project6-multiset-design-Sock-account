@@ -20,8 +20,8 @@ Function insert(key,value);
  INSERT bucket into buckets
  RETURN true
  IF hashcode doesn't match any index in buckets 
- RETURN false  
- CREATE bucket
+ RETURN false
+ ```  
 
 
 
