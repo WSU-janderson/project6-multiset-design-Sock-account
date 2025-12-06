@@ -14,7 +14,7 @@ DEFINE HashTable_size as size_t
 Function insert(key,value);
  return true or false
  START
- GET hashcode from key % HashTable_size
+ GET hashcode from key
  CREATE a bucket containing key and value
  IF hashcode matches an index in buckets
  INSERT bucket into buckets
@@ -26,6 +26,17 @@ Function insert(key,value);
 
 
 ###### The next operation would be a erase function. This would run at a time complexity of O(log n). When the player either drop an item or expends an item the item will the index that the item in question was in is cleared. An edge case for this operation is if a item is removed for a quest. The underlying data structure supports the operation because without the operation the table would get clogged with expended items. 
+
+```text
+FUNCTION erase(key)
+RETURN true or false
+GET keycode from key 
+GET hashcode from key
+IF keycode matches the key in buckets
+RETURN true
+IF none of the keys match keycode
+RETURN false
+```
 
 ###### The next operation is a find function. The way this operation would work in game is with a search bar. If the player types the name of an item into the search bar the HashTable is searched for a key that matches the name entered by the player. It should have a time complexity of O(log n). A possible edge case is when the player searches for an item that is not in the player's inventory. The data structure supports the operation because the HashTable is what stores the inventory items.
 
