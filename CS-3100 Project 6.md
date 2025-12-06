@@ -5,4 +5,18 @@
 ### Design Philosophy
 ###### The reason I chose to build the player inventory with a HashTable is because I believe a HashTable is the most efficient way of handling player inventories. It can allow for quick access to the items in the table and the ability to manipulate the amount stored in the hash. The client of the multiset in the game itself and the user is the player of the game. 
 ### Core Operations
-######  The first operation that the multiset will support is an insert function.  
+######  There are four core operations that a multiset should support. The first operation that the multiset will support is an insert function. It should run at a O(n) time complexity. When the player picks up an item that item's name is used it's key a hashcode is then generated the item is then stored at the index that corresponds to the hashcode. An edge case would be receiving an item from an npc. The HashTable is being supported because without the operation there would be no way to insert new items. The next operation would be a erase function. This would run at a time complexity of O(n) time complexity. When the player either drop an item or expends an item the item will the index that the item in question was in is cleared. An edge case for this operation is if a item is removed for a quest. The underlying data structure supports the operation because without the operation the table would get clogged with expended items. 
+
+
+
+
+
+
+
+
+
+
+
+
+### Sources
+https://www.geeksforgeeks.org/cpp/multiset-in-cpp-stl/
