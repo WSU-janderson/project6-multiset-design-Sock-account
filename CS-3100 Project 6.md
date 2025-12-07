@@ -42,8 +42,17 @@ RETURN false
 
 ###### The last operation is a Traverse function. This function would be used to sort the inventory when ever the player prompts it. It should have a time complexity O(n). A possible edge case is if all of the items in the inventory are the same type. The data structure supports the operation because the HashTable is what stores the inventory items.
 
+### Set Operations
+###### The set operation that I wanted to cover is the intersection_with() operation. How this could be used in gameplay is having a quest that requires two or more players and those players must have a certain item. This would call the find function in each player inventory and if all players have the item then the quest can be started. A relevant edge case if a player has duplicate items in different hash indexes.
 
+### Extension Feature 
+###### The feature I would include is a way to assign favorite items. This function would create a new HashTable with the same parameters as the main one. When the player clicks the option to favorite an item that item is added to a HashTable called fav_items. When the player chooses to sort by favorites all of the items in fav_items will be listed. This will help players get to the items they use the most use quicker.   
 
+### Trade-off Analysis
+###### One of the reasons I chose not to use an AVLTree is that a HashTable offers a much simpler way of inserting and extracting items from a inventory. An AVLTree would requires constant checking of the trees balance every time a node is added or removed and if the tree is not balanced it needs to be rebalanced. A HashTable just requires a key. This makes an AVLTree not ideal for holding an inventory.  
+
+### Alterative Design Sketch
+###### If I had to choose a different if would be an Sequence  
 
 
 
