@@ -52,7 +52,14 @@ RETURN false
 ###### One of the reasons I chose not to use an AVLTree is that a HashTable offers a much simpler way of inserting and extracting items from a inventory. An AVLTree would requires constant checking of the trees balance every time a node is added or removed and if the tree is not balanced it needs to be rebalanced. A HashTable just requires a key. This makes an AVLTree not ideal for holding an inventory.  
 
 ### Alterative Design Sketch
-###### If I had to choose a different if would be an Sequence  
+###### If I had to choose a different if would be an Sequence. You could insert, erase, traverse, and find by using two nodes the keep track of the head and tail of the sequence. This could work albeit very slowly. 
+
+
+### Evaluation Plan
+###### I would start out by adding every type of item into the HashTable. I would then use the get operation to extract the item from each index in the table. I would then test the remove function by removing items from the table at random. All of these tests should test the time complexity of each operation as well. 
+
+### Conclusion 
+###### My design allows for efficient insertion, traversal, deletion, and extraction of items. I accept that making sub-items will be harder in a HashTable than in a AVLTree. 
 
 
 
@@ -66,3 +73,5 @@ RETURN false
 
 ### Sources
 https://www.geeksforgeeks.org/cpp/multiset-in-cpp-stl/
+
+https://www.sciencedirect.com/science/article/pii/0022000081900337
